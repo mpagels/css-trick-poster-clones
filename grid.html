@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Grid Poster Clone</title>
+</head>
+<body>
+    
+<div class="container">
+   
+    <div class="row1">
+        
+        <div class="one">
+            <h1>display</h1>
+            <pre class="code-block">
+                <code>
+    .container {
+
+        display: grid | inline-grid;
+
+        }       </code>
+            </pre>
+        </div>
+       
+    </div>
+
+   
+    <div class="row3">
+        
+        <div class="row2">
+            <div class="row3-container size-grid">
+
+                <div class="one c">
+                    <h1>grid-template-columns & grid-template-rows</h1>
+                    <img src="images/template-columns-rows-01.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .container {
+
+        grid-template-columns: 40px 50px auto 50px 40px;
+        grid-template-rows: 25% 100px auto;
+
+    }                 </code>
+                    </pre>
+                </div>  
+
+                <div class="one c">
+                    <h1>ggrid-template-areas</h1>
+                    <img src="images/dddgrid-template-areas.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    
+
+    .item-a {
+        grid-area: header;
+    }
+
+    .item-b {
+        grid-area: main;
+    }
+
+    .item-c {
+        grid-area: sidebar;
+    }
+
+    .item-d {
+    g   rid-area: footer;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header header header header"
+            "main main . sidebar"
+            "footer footer footer footer";
+    }
+
+                  </code>
+                    </pre>
+                </div> 
+                
+
+                <div class="one c">
+                    <h1>column-gap, row-gap, gap</h1>
+                    <img src="images/dddgrid-gap.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    
+
+    .container {
+        grid-template-columns: 100px 50px 100px;
+        grid-template-rows: 80px auto 80px; 
+        column-gap: 10px;
+        row-gap: 15px;
+        }
+
+                  </code>
+                    </pre>
+                </div> 
+
+                <div class="one c">
+                    <h1>justify-content</h1>
+                    <div class="row4">
+                        <div class="one x">
+                            <h2>start</h2>
+                            <img src="images/justify-content-start.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>end</h2>
+                            <img src="images/justify-content-end.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>center</h2>
+                            <img src="images/justify-content-center.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>stretch</h2>
+                            <img src="images/justify-content-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>space-around</h2>
+                            <img src="images/justify-content-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>space-between</h2>
+                            <img src="images/justify-content-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>space-evenly</h2>
+                            <img src="images/justify-content-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="g">
+                            <pre class="code-block">
+                                <code>
+            
+        
+    .container {
+        
+        justify-content: start | end | center | 
+        stretch | space-around | 
+        space-between | space-evenly;    
+         
+        }
+        
+                                </code>
+                            </pre>
+                        </div> 
+                    </div>
+  
+                </div> 
+
+                
+                <div class="one c">
+                    <h1>align-content</h1>
+                    <div class="row4">
+                        <div class="one x">
+                            <h2>start</h2>
+                            <img src="images/align-content-start.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>end</h2>
+                            <img src="images/align-content-end.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>center</h2>
+                            <img src="images/align-content-center.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>stretch</h2>
+                            <img src="images/align-content-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>space-around</h2>
+                            <img src="images/align-content-space-around.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>space-between</h2>
+                            <img src="images/align-content-space-between.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>space-evenly</h2>
+                            <img src="images//align-content-space-evenly.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="g">
+                            <pre class="code-block">
+                                <code>
+            
+        
+    .container {
+        
+        align-content: start | end | center | 
+        stretch | space-around | 
+        space-between | space-evenly;    
+         
+        }
+        
+                                </code>
+                            </pre>
+                        </div> 
+                    </div>
+
+                </div>
+
+                <div class="one c">
+                    <h1>justify-items</h1>
+                    <div class="row4">
+                        <div class="one x">
+                            <h2>start</h2>
+                            <img src="images/justify-items-start.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>end</h2>
+                            <img src="images/justify-items-end.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>center</h2>
+                            <img src="images/justify-items-center.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>stretch</h2>
+                            <img src="images/justify-items-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="g">
+                            <pre class="code-block">
+                                <code>
+            
+        
+    .container {
+        
+        justify-items: start | end | 
+        center | stretch;   
+         
+        }
+        
+                                </code>
+                            </pre>
+                        </div> 
+                    </div>
+                </div> 
+
+                    <div class="one c">
+                        <h1>align-items</h1>
+                        <div class="row4">
+                            <div class="one x">
+                                <h2>start</h2>
+                                <img src="images/align-items-start.svg" width=200 alt=""><br>
+                            </div>
+    
+                            <div class="one x">
+                                <h2>end</h2>
+                                <img src="images/align-items-end.svg" width=200 alt=""><br>
+                            </div>
+    
+                            <div class="one x">
+                                <h2>center</h2>
+                                <img src="images/align-items-center.svg" width=200 alt=""><br>
+                            </div>
+    
+                            <div class="one x">
+                                <h2>stretch</h2>
+                                <img src="images/align-items-stretch.svg" width=200 alt=""><br>
+                            </div>
+    
+                            <div class="g">
+                                <pre class="code-block">
+                                    <code>
+                
+            
+        .container {
+            
+            align-content: start | end | center | 
+            stretch | space-around | 
+            space-between | space-evenly;    
+             
+            }
+            
+                                    </code>
+                                </pre>
+                            </div> 
+                        </div>
+                    </div> 
+
+
+            </div>
+
+            <!-- Start right colum-->
+
+            <div class="row3-container">
+
+                <div class="one i">
+                    <h1>grid-colum-start <br> grid-column-end <br> grid-row-start <br> grid-row-end</h1>
+                    <img src="images/grid-column-row-start-end-01.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .item-a {
+        grid-column-start: 2;
+        grid-column-end: five;
+        grid-row-start: row1-start;
+        grid-row-end: 3;
+        }                </code>
+                    </pre>
+                </div>  
+
+                <div class="one i">
+                    <h1>grid-column & grid-rows</h1>
+                    <p>Shorthand for grid-column-start + grid-column-end, <br>and grid-row-start + grid-row-end, respectively.</p>
+                    <img src="images/grid-column-row.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .item-c {
+        grid-column: 3 / span 2;
+        grid-row: third-line / 4;
+        }               </code>
+                </div>
+
+                <div class="one i">
+                    <h1>grid-area</h1>
+                    <img src="images/grid-area.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .item {
+        grid-area: &lt;name> | &lt;row-start> / 
+        &lt;column-start> / &lt;row-end> / &lt;column-end>;
+        } 
+    
+    # EXAMPLE:
+    
+    .item-d {
+        grid-area: 1 / col4-start / last-line / 6;
+      }
+                        </code>
+                </div>
+
+                
+                <div class="one i">
+                    <h1>justify-self</h1>
+                    <div class="row4">
+                        <div class="one x">
+                            <h2>start</h2>
+                            <img src="images/justify-self-start.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>end</h2>
+                            <img src="images/justify-self-end.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>center</h2>
+                            <img src="images/justify-self-center.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>stretch</h2>
+                            <img src="images/justify-self-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="g">
+                            <pre class="code-block">
+                                <code>
+            
+        
+    .item {
+
+        justify-self: start | end | 
+        center | stretch;
+
+        }
+        
+                                </code>
+                            </pre>
+                        </div> 
+                    </div>
+                </div> 
+
+                <div class="one i">
+                    <h1>align-self</h1>
+                    <div class="row4">
+                        <div class="one x">
+                            <h2>start</h2>
+                            <img src="images/align-self-start.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>end</h2>
+                            <img src="images/align-self-end.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>center</h2>
+                            <img src="images/align-self-center.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="one x">
+                            <h2>stretch</h2>
+                            <img src="images/align-self-stretch.svg" width=200 alt=""><br>
+                        </div>
+
+                        <div class="g">
+                            <pre class="code-block">
+                                <code>
+            
+        
+    .item {
+
+        align-self: start | end | 
+        center | stretch;
+
+        }
+        
+                                </code>
+                            </pre>
+                        </div> 
+                    </div>
+                </div> 
+        </div> 
+           
+    </div>
+    
+    
+
+   
+
+        
+</div>
+
+</div>
+</body>
+</html>

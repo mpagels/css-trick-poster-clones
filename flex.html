@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flex Poster Clone</title>
+</head>
+<body>
+    
+<div class="container">
+   
+    <div class="row1">
+        
+        <div class="one c">
+            <img src="images/01-container.svg" width=450 alt="">                    
+        </div>
+
+        <div class="one i">
+            <img src="images/02-items.svg" width=450 alt="">
+        </div>
+       
+    </div>
+
+    <div class="row2">
+        <div class="one">
+        <h1>display</h1>
+        <pre class="code-block">
+            <code>
+    .container {
+
+        display: flex; /* or inline-flex */
+
+        }       </code>
+        </pre>
+    </div>
+    </div>
+
+    <div class="row3">
+
+        <div class="row3-container">
+
+                <div class="one c">
+                    <h1>flex-direction</h1>
+                    <img src="images/flex-direction.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .container {
+
+        flex-direction: row | row-reverse | 
+        column | column-reverse;
+
+        }       </code>
+                    </pre>
+                </div>
+
+                <div class="one c">
+                    <h1>flex-wrap</h1>
+                    <img src="images/flex-wrap.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .container {
+
+        flex-wrap: nowrap | wrap | wrap-reverse;
+
+        }       </code>
+                </pre>
+                </div>
+
+                <div class="one c">
+                    <h1>justify-content</h1>
+                    <img src="images/justify-content.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .container {
+
+        justify-content: flex-start | flex-end | 
+        center | space-between | space-around | 
+        space-evenly | start | end | 
+        left | right ... + safe | unsafe;
+
+        }       </code>
+                    </pre>
+                </div>
+
+                <div class="one c">
+                    <h1>align-items</h1>
+                    <img src="images/align-items.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .container {
+
+        align-items: stretch | flex-start | 
+        flex-end | center | baseline | 
+        first baseline | last baseline | 
+        start | end | self-start | 
+        self-end + ... safe | unsafe;
+
+        }      </code>
+                    </pre>
+                </div>
+
+                <div class="one c">
+                    <h1>align-content</h1>
+                    <img src="images/align-content.svg" width=450 alt=""><br>
+                    <pre class="code-block">
+                        <code>
+    .container {
+
+        align-content: flex-start | flex-end | 
+        center | space-between | space-around | 
+        space-evenly | stretch | start | end | 
+        baseline | first baseline | 
+        last baseline + ... safe | unsafe;
+
+        }     </code>
+                    </pre>
+                </div>
+        </div>
+        
+        <div class="row3-container">
+
+            <div class="one i">
+                <h1>order</h1>
+                <img src="images/order.svg" width=450 alt="">
+    
+                <pre class="code-block">
+                    <code>
+    .item {
+
+        order: 5; /* default is 0 */
+
+        }      </code>
+            </pre>
+                                   
+            </div>
+            
+            <div class="one i">
+                <h1>flex-grow, flex-shrink, flex-basis</h1>
+                <img src="images/flex-grow.svg" width=450 alt="">
+    
+                <pre class="code-block">
+                    <code>
+    .item {
+
+        flex-grow: 4; /* default 0 */
+        flex-shrink: 3; /* default 1 */
+        flex-basis:  | auto; /* default auto */
+
+        }     </code>
+            </pre>
+                                   
+            </div>
+    
+            <div class="one i">
+                <h1>align-self</h1>
+                <img src="images/flex-grow.svg" width=450 alt="">
+    
+                <pre class="code-block">
+                    <code>
+    .item {
+
+        align-self: auto | flex-start | 
+        flex-end | center | baseline | stretch;
+
+        }    </code>
+                </pre>
+                                   
+            </div>
+        </div>
+
+        
+    </div>
+
+</div>
+</body>
+</html>
