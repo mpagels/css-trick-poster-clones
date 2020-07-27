@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="js.js"></script>
     <title>Flex Poster Clone</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>CLEAN FLEX INFOS <br>CLICK ON AREA OF INTEREST TO SHOW INFOS</h1>
+    <p>This is a "practice" project of mine when I did the neuefische webdeveloper bootcamp to try out and apply what I had learned. So the information may not be up-to-date or complete. Please visit source for more infos at <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">css-tricks</a>!</p>
     
-<div class="container">
-   
-    <div class="row1">
-        
+    <div class="container">
+      <div class="row1">
         <div class="one c">
-            <img src="images/01-container.svg" width=450 alt="">                    
+          <img src="images/01-container.svg" width="450" alt="" />
         </div>
 
         <div class="one i">
-            <img src="images/02-items.svg" width=450 alt="">
+          <img src="images/02-items.svg" width="450" alt="" />
         </div>
-       
-    </div>
+      </div>
 
-    <div class="row2">
+      <div class="row2">
         <div class="one">
-        <h1>display</h1>
-        <pre class="code-block">
+          <section class="description">
+            <p>
+              Since flexbox is a whole module and not a single property, it
+              involves a lot of things including its whole set of properties.
+              Some of them are meant to be set on the container (parent element,
+              known as “flex container”) whereas the others are meant to be set
+              on the children (said “flex items”).
+            </p>
+            <p>
+              If “regular” layout is based on both block and inline flow
+              directions, the flex layout is based on “flex-flow directions”.
+              Please have a look at this figure from the specification,
+              explaining the main idea behind the flex layout.
+            </p>
+          </section>
+          <img src="images/3-flex-basic-terminology.svg" width="450" alt="" /><br />
+          <section class="description">
+            <p>Items will be laid out following either the <code>main axis</code> (from <code>main-start</code> to <code>main-end</code>) or the cross axis (from <code>cross-start</code> to <code>cross-end</code>).</p>
+            <ul><li><strong>main axis</strong> – The main axis of a flex container is the primary axis along which flex items are laid out. Beware, it is not necessarily horizontal; it depends on the <code>flex-direction</code> property (see below).</li><li><strong>main-start | main-end</strong> – The flex items are placed within the container starting from main-start and going to main-end.</li><li><strong>main size</strong> – A flex item’s width or height, whichever is in the main dimension, is the item’s main size. The flex item’s main size property is either the ‘width’ or ‘height’ property, whichever is in the main dimension.</li><li><strong>cross axis</strong> – The axis perpendicular to the main axis is called the cross axis. Its direction depends on the main axis direction.</li><li><strong>cross-start | cross-end</strong> – Flex lines are filled with items and placed into the container starting on the cross-start side of the flex container and going toward the cross-end side.</li><li><strong>cross size</strong> – The width or height of a flex item, whichever is in the cross dimension, is the item’s cross size. The cross size property is whichever of ‘width’ or ‘height’ that is in the cross dimension.</li></ul>
+          </section>
+        </div>
+      </div>
+        <div class="one">
+          <h1>display</h1>
+          <section class="description">
+            This defines a flex container; inline or block depending <br />on
+            the given value. It enables a flex context for all <br />
+            its direct children.
+          </section>
+          <pre class="code-block">
             <code>
     .container {
 
@@ -33,17 +61,26 @@
 
         }       </code>
         </pre>
-    </div>
-    </div>
+          <section class="description">
+            Note that CSS columns have no effect on a flex container.
+          </section>
+        </div>
+      </div>
 
-    <div class="row3">
-
+      <div class="row3">
         <div class="row3-container">
+          <div class="one c">
+            <h1>flex-direction</h1>
+            <img src="images/flex-direction.svg" width="450" alt="" /><br />
 
-                <div class="one c">
-                    <h1>flex-direction</h1>
-                    <img src="images/flex-direction.svg" width=450 alt=""><br>
-                    <pre class="code-block">
+            <section class="description">
+              This establishes the main-axis, thus defining the direction flex
+              items are placed in the flex container. Flexbox is (aside from
+              optional wrapping) a single-direction layout concept. Think of
+              flex items as primarily laying out either in horizontal rows or
+              vertical columns.
+            </section>
+            <pre class="code-block">
                         <code>
     .container {
 
@@ -52,12 +89,37 @@
 
         }       </code>
                     </pre>
-                </div>
+            <section class="description">
+              <ul>
+                <li>
+                  <code>row</code> (default): left to right in <code>ltr</code>;
+                  right to left in <code>rtl</code>
+                </li>
+                <li>
+                  <code>row-reverse</code>: right to left in <code>ltr</code>;
+                  left to right in <code>rtl</code>
+                </li>
+                <li>
+                  <code>column</code>: same as <code>row</code> but top to
+                  bottom
+                </li>
+                <li>
+                  <code>column-reverse</code>: same as
+                  <code>row-reverse</code> but bottom to top
+                </li>
+              </ul>
+            </section>
+          </div>
 
-                <div class="one c">
-                    <h1>flex-wrap</h1>
-                    <img src="images/flex-wrap.svg" width=450 alt=""><br>
-                    <pre class="code-block">
+          <div class="one c">
+            <h1>flex-wrap</h1>
+            <img src="images/flex-wrap.svg" width="450" alt="" /><br />
+            <section class="description">
+              By default, flex items will all try to fit onto one line. You can
+              change that and allow the items to wrap as needed with this
+              property.
+            </section>
+            <pre class="code-block">
                         <code>
     .container {
 
@@ -65,12 +127,41 @@
 
         }       </code>
                 </pre>
-                </div>
+            <section class="description">
+              <ul>
+                <li>
+                  <code>nowrap</code> (default): all flex items will be on one
+                  line
+                </li>
+                <li>
+                  <code>wrap</code>: flex items will wrap onto multiple lines,
+                  from top to bottom.
+                </li>
+                <li>
+                  <code>wrap-reverse</code>: flex items will wrap onto multiple
+                  lines from bottom to top.
+                </li>
+              </ul>
+              <p>
+                There are some
+                <a href="https://css-tricks.com/almanac/properties/f/flex-wrap/"
+                  >visual demos of <code>flex-wrap</code> here</a
+                >.
+              </p>
+            </section>
+          </div>
 
-                <div class="one c">
-                    <h1>justify-content</h1>
-                    <img src="images/justify-content.svg" width=450 alt=""><br>
-                    <pre class="code-block">
+          <div class="one c">
+            <h1>justify-content</h1>
+            <img src="images/justify-content.svg" width="450" alt="" /><br />
+            <section class="description">
+              This defines the alignment along the main axis. It helps
+              distribute extra free space leftover when either all the flex
+              items on a line are inflexible, or are flexible but have reached
+              their maximum size. It also exerts some control over the alignment
+              of items when they overflow the line.
+            </section>
+            <pre class="code-block">
                         <code>
     .container {
 
@@ -81,12 +172,90 @@
 
         }       </code>
                     </pre>
-                </div>
+            <section class="description">
+              <ul>
+                <li>
+                  <code>flex-start</code> (default): items are packed toward the
+                  start of the flex-direction.
+                </li>
+                <li>
+                  <code>flex-end</code>: items are packed toward the end of the
+                  flex-direction.
+                </li>
+                <li>
+                  <code>start</code>: items are packed toward the start of the
+                  <code>writing-mode</code> direction.
+                </li>
+                <li>
+                  <code>end</code>: items are packed toward the end of the
+                  <code>writing-mode</code> direction.
+                </li>
+                <li>
+                  <code>left</code>: items are packed toward left edge of the
+                  container, unless that doesn’t make sense with the
+                  <code>flex-direction</code>, then it behaves like
+                  <code>start</code>.
+                </li>
+                <li>
+                  <code>right</code>: items are packed toward right edge of the
+                  container, unless that doesn’t make sense with the
+                  <code>flex-direction</code>, then it behaves like
+                  <code>start</code>.
+                </li>
+                <li><code>center</code>: items are centered along the line</li>
+                <li>
+                  <code>space-between</code>: items are evenly distributed in
+                  the line; first item is on the start line, last item on the
+                  end line
+                </li>
+                <li>
+                  <code>space-around</code>: items are evenly distributed in the
+                  line with equal space around them. Note that visually the
+                  spaces aren’t equal, since all the items have equal space on
+                  both sides. The first item will have one unit of space against
+                  the container edge, but two units of space between the next
+                  item because that next item has its own spacing that applies.
+                </li>
+                <li>
+                  <code>space-evenly</code>: items are distributed so that the
+                  spacing between any two items (and the space to the edges) is
+                  equal.
+                </li>
+              </ul>
+              <p>
+                Note that that browser support for these values is nuanced. For
+                example, <code>space-between</code> never got support from some
+                versions of Edge, and start/end/left/right aren’t in Chrome yet.
+                MDN
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
+                  >has detailed charts</a
+                >. The safest values are <code>flex-start</code>,
+                <code>flex-end</code>, and <code>center</code>.
+              </p>
+              <p>
+                There are also two additional keywords you can pair with these
+                values: <code>safe</code> and <code>unsafe</code>. Using
+                <code>safe</code> ensures that however you do this type of
+                positioning, you can’t push an element such that it renders
+                off-screen (e.g. off the top) in such a way the content can’t be
+                scrolled too (called “data loss”).
+              </p>
+            </section>
+          </div>
 
-                <div class="one c">
-                    <h1>align-items</h1>
-                    <img src="images/align-items.svg" width=450 alt=""><br>
-                    <pre class="code-block">
+          <div class="one c">
+            <h1>align-items</h1>
+            <img src="images/align-items.svg" width="450" alt="" /><br />
+            <section class="description">
+              <p>
+                <br />This defines the default behavior for how flex items are
+                laid out along the <strong>cross axis</strong> on the current
+                line. Think of it as the <code>justify-content</code> version
+                for the cross-axis (perpendicular to the main-axis).
+              </p>
+            </section>
+            <pre class="code-block">
                         <code>
     .container {
 
@@ -98,12 +267,64 @@
 
         }      </code>
                     </pre>
-                </div>
+            <section class="description">
+              <ul>
+                <li>
+                  <code>stretch</code> (default): stretch to fill the container
+                  (still respect min-width/max-width)
+                </li>
+                <li>
+                  <code>flex-start</code> / <code>start</code> /
+                  <code>self-start</code>: items are placed at the start of the
+                  cross axis. The difference between these is subtle, and is
+                  about respecting the <code>flex-direction</code> rules or the
+                  <code>writing-mode</code> rules.
+                </li>
+                <li>
+                  <code>flex-end</code> / <code>end</code> /
+                  <code>self-end</code>: items are placed at the end of the
+                  cross axis. The difference again is subtle and is about
+                  respecting <code>flex-direction</code> rules vs.
+                  <code>writing-mode</code> rules.
+                </li>
+                <li>
+                  <code>center</code>: items are centered in the cross-axis
+                </li>
+                <li>
+                  <code>baseline</code>: items are aligned such as their
+                  baselines align
+                </li>
+              </ul>
+              <p>
+                The <code>safe</code> and <code>unsafe</code> modifier keywords
+                can be used in conjunction with all the rest of these keywords
+                (although note
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
+                  >browser support</a
+                >), and deal with helping you prevent aligning elements such
+                that the content becomes inaccessible.
+              </p>
+            </section>
+          </div>
 
-                <div class="one c">
-                    <h1>align-content</h1>
-                    <img src="images/align-content.svg" width=450 alt=""><br>
-                    <pre class="code-block">
+          <div class="one c">
+            <h1>align-content</h1>
+            <img src="images/align-content.svg" width="450" alt="" /><br />
+            <section class="description">
+              <p>
+                <br />This aligns a flex container’s lines within when there is
+                extra space in the cross-axis, similar to how
+                <code>justify-content</code> aligns individual items within the
+                main-axis.
+              </p>
+              <p>
+                <strong>Note:</strong> this property has no effect when there is
+                only one line of flex items.
+              </p>
+            </section>
+
+            <pre class="code-block">
                         <code>
     .container {
 
@@ -115,16 +336,67 @@
 
         }     </code>
                     </pre>
-                </div>
+            <section class="description">
+              <ul>
+                <li>
+                  <code>flex-start</code> / <code>start</code>: items packed to
+                  the start of the container. The (more supported)
+                  <code>flex-start</code> honors the
+                  <code>flex-direction</code> while <code>start</code> honors
+                  the <code>writing-mode</code> direction.
+                </li>
+                <li>
+                  <code>flex-end</code> / <code>end</code>: items packed to the
+                  end of the container. The (more support)
+                  <code>flex-end</code> honors the
+                  <code>flex-direction</code> while end honors the
+                  <code>writing-mode</code> direction.
+                </li>
+                <li><code>center</code>: items centered in the container</li>
+                <li>
+                  <code>space-between</code>: items evenly distributed; the
+                  first line is at the start of the container while the last one
+                  is at the end
+                </li>
+                <li>
+                  <code>space-around</code>: items evenly distributed with equal
+                  space around each line
+                </li>
+                <li>
+                  <code>space-evenly</code>: items are evenly distributed with
+                  equal space around them
+                </li>
+                <li>
+                  <code>stretch</code> (default): lines stretch to take up the
+                  remaining space
+                </li>
+              </ul>
+              <p>
+                The <code>safe</code> and <code>unsafe</code> modifier keywords
+                can be used in conjunction with all the rest of these keywords
+                (although note
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
+                  >browser support</a
+                >), and deal with helping you prevent aligning elements such
+                that the content becomes inaccessible.
+              </p>
+            </section>
+          </div>
         </div>
-        
-        <div class="row3-container">
 
-            <div class="one i">
-                <h1>order</h1>
-                <img src="images/order.svg" width=450 alt="">
-    
-                <pre class="code-block">
+        <div class="row3-container">
+          <div class="one i">
+            <h1>order</h1>
+            <img src="images/order.svg" width="450" alt="" />
+            <section class="description">
+              <p>
+                <br />By default, flex items are laid out in the source order.
+                However, the <code>order</code> property controls the order in
+                which they appear in the flex container.
+              </p>
+            </section>
+            <pre class="code-block">
                     <code>
     .item {
 
@@ -132,14 +404,27 @@
 
         }      </code>
             </pre>
-                                   
-            </div>
-            
-            <div class="one i">
-                <h1>flex-grow, flex-shrink, flex-basis</h1>
-                <img src="images/flex-grow.svg" width=450 alt="">
-    
-                <pre class="code-block">
+          </div>
+
+          <div class="one i">
+            <h1>flex-grow, flex-shrink, flex-basis</h1>
+            <img src="images/flex-grow.svg" width="450" alt="" />
+            <section class="description">
+              <p>
+                <br />This defines the ability for a flex item to grow if
+                necessary. It accepts a unitless value that serves as a
+                proportion. It dictates what amount of the available space
+                inside the flex container the item should take up.
+              </p>
+              <p>
+                If all items have <code>flex-grow</code> set to 1, the remaining
+                space in the container will be distributed equally to all
+                children. If one of the children has a value of 2, the remaining
+                space would take up twice as much space as the others (or it
+                will try to, at least).
+              </p>
+            </section>
+            <pre class="code-block">
                     <code>
     .item {
 
@@ -149,14 +434,22 @@
 
         }     </code>
             </pre>
-                                   
-            </div>
-    
-            <div class="one i">
-                <h1>align-self</h1>
-                <img src="images/flex-grow.svg" width=450 alt="">
-    
-                <pre class="code-block">
+            <section class="description">
+              <p>Negative numbers are invalid.</p>
+            </section>
+          </div>
+
+          <div class="one i">
+            <h1>align-self</h1>
+            <img src="images/align-self.svg" width="450" alt="" />
+            <section class="description">
+              <p>
+                <br />This allows the default alignment (or the one specified by
+                <code>align-items</code>) to be overridden for individual flex
+                items.
+              </p>
+            </section>
+            <pre class="code-block">
                     <code>
     .item {
 
@@ -165,13 +458,15 @@
 
         }    </code>
                 </pre>
-                                   
-            </div>
+            <section class="description">
+              <p>
+                Note that <code>float</code>, <code>clear</code> and
+                <code>vertical-align</code> have no effect on a flex item.
+              </p>
+            </section>
+          </div>
         </div>
-
-        
+      </div>
     </div>
-
-</div>
-</body>
+  </body>
 </html>
