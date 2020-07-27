@@ -1,0 +1,35 @@
+{
+  "name": "companion-app-team2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel index.html",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuefische/hh-2020-w4-team2.git"
+  },
+  "author": "team2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neuefische/hh-2020-w4-team2/issues"
+  },
+  "homepage": "https://github.com/neuefische/hh-2020-w4-team2#readme",
+  "dependencies": {
+    "@storybook/preset-scss": "^1.0.2",
+    "css-loader": "^3.6.0",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/html": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  }
+}
